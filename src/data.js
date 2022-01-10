@@ -2,11 +2,14 @@ import React from "react";
 import {IndividualData} from './individualdata';
 
 export  const Data =({exelData})=>{
-  return  exelData.map((individualExcelData)=>(
-      <tr key={individualExcelData.Id}>
+    exelData.map((individualExcelData) =>{
+      
+      return( <tr   key={individualExcelData.Id}>
           <IndividualData individualExcelData={individualExcelData}/>
-      </tr>
+          
+      </tr>)
 
-  ))
+  })
+  
 }
  

@@ -1,10 +1,10 @@
 import {React, useState } from "react";
-import bootstrap from "bootstrap";
+
 
  import { Data } from "./data";
 
 export default function App(){
-  const[ExcelData,setExcelData]=useState(null)
+  const[ExcelData,setExcelData]=useState('null')
 
  const handleFile=(e)=>{
    let selectFile = e.target.files[0];
@@ -12,9 +12,12 @@ export default function App(){
     console.log(selectFile.type)
    }else{
      console.log('please select your file')
+     
+
    }
- }
- setExcelData
+   setExcelData(selectFile.type)
+ } 
+ 
 
   return(
     <>
